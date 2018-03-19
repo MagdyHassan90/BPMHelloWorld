@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/ReviewLoanTask.task</file>
+      <name>HumanTasks/ReviewLoanTask.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/CaptureLoanTask.task</file>
+      <name>HumanTasks/CaptureLoanTask.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>CreditRules</loc>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>Rule Dictionary CreditRules is invalid.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</file>
+      <name>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</name>
+      <fix/>
+      <msg>Node 'Credit Rating' has no implementation defined</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</file>
+      <name>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</name>
+      <fix/>
+      <msg>Node 'Disburse Loan' has no implementation defined</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</file>
+      <name>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</name>
+      <fix/>
+      <msg>The condition in Sequence Flow (Routing To End) is empty.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</file>
+      <name>/magdy/Tutorial/BPM/MyWorkSpaceBPM/Projects/HelloWorld_OBE2/HelloWorldProject/SOA/processes/HelloWorldProcess.bpmn</name>
+      <fix/>
+      <msg>The condition in Sequence Flow (Routing To Disburse Loan) is empty.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/UnderWriterTask.task</file>
+      <name>HumanTasks/UnderWriterTask.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+</Faults>

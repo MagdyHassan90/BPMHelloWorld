@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="CreditRules">
+   <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="OracleRulesSDK">
+      <repository type="SCA-Archive">
+         <path>HelloWorldProject/oracle/rules/com/oracle/truemega/CreditRules.rules</path>
+      </repository>
+   </ruleEngineProvider>
+   <decisionService name="CreditRules_DecisionService" ruleEngineProviderReference="OracleRulesSDK" targetNamespace="http://xmlns.oracle.com/CreditRules/CreditRules_DecisionService">
+      <catalog>CreditRules</catalog>
+      <pattern name="CallFunctionStateless">
+         <arguments>
+            <call>com.oracle.truemega.CreditRules.DecisionService</call>
+         </arguments>
+      </pattern>
+      <pattern name="CallFunctionStateful">
+         <arguments>
+            <call>com.oracle.truemega.CreditRules.DecisionService</call>
+         </arguments>
+      </pattern>
+   </decisionService>
+</decisionServices>

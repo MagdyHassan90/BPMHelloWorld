@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="HelloWorldProcess">
+      <topicDocumentations>
+         <topicDocumentation name="HelloWorldProcess"/>
+         <topicDocumentation name="ACT21977500711025">
+            <labels>
+               <label locale="en">Capture Loan Request</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT21978153708327">
+            <labels>
+               <label locale="en">Review Loan Application</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT21978164668768">
+            <labels>
+               <label locale="en">Credit Rating</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT21978167152727">
+            <labels>
+               <label locale="en">Credit Rules</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT21978170069417">
+            <labels>
+               <label locale="en">Disburse Loan</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT21978199983291">
+            <labels>
+               <label locale="en">underwriter Review</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT21977500710914">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT21977500710939">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT21978223984591">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW21978158595439">
+            <labels>
+               <label locale="en">Review OutCome</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW21978203459729">
+            <labels>
+               <label locale="en">underwriter outcome</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW21978451709275">
+            <labels>
+               <label locale="en">Routing</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf21977500711056"/>
+         <topicDocumentation name="sf21977500711092"/>
+         <topicDocumentation name="sf21978157470674"/>
+         <topicDocumentation name="sf21978160175486"/>
+         <topicDocumentation name="sf21978165905787"/>
+         <topicDocumentation name="sf2197816875641"/>
+         <topicDocumentation name="sf21978172922819"/>
+         <topicDocumentation name="sf21978174158532">
+            <labels>
+               <label locale="en">Need MOre Info</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf2197820287987"/>
+         <topicDocumentation name="sf21978205261567">
+            <labels>
+               <label locale="en">Approved</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf21978227361317">
+            <labels>
+               <label locale="en">Loan Rejected</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf21978452695710"/>
+         <topicDocumentation name="sf21978454780353">
+            <labels>
+               <label locale="en">AutoMatically Rejected</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf21978462291944">
+            <labels>
+               <label locale="en">Automatically Approved</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+      </topicDocumentations>
+   </component>
+</processDocumentation>
