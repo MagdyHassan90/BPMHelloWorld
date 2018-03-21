@@ -397,6 +397,148 @@
       <NodeName>RuleOutputType</NodeName>
       <Namespace>http://xmlns.oracle.com/bpm/bpmobject/BusinessData/RuleOutput</Namespace>
     </JaxbFactType>
+    <BucketSet id="G}17d768a9:162460f4b33:-7beb">
+      <Name>LoanAmount</Name>
+      <Alias>Loan Amount</Alias>
+      <Visible>true</Visible>
+      <CreationUpdateNumber>12</CreationUpdateNumber>
+      <IDofType>J}double</IDofType>
+      <ListContentID>B}nil</ListContentID>
+      <Type>double</Type>
+      <Form>Range</Form>
+      <Bucket id="G}17d768a9:162460f4b33:-7bea">
+        <Name>&lt;10000</Name>
+        <Alias>&lt;10000</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>12</CreationUpdateNumber>
+        <Inclusive>true</Inclusive>
+        <Otherwise>true</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}78">
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7be6">
+        <Name>[10000..100000)</Name>
+        <Alias>[10000..100000)</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>28</CreationUpdateNumber>
+        <Inclusive>true</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}116">
+          <Value>10000</Value>
+          <ResolvedValue>10000</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7be4">
+        <Name>[100000..500000)</Name>
+        <Alias>[100000..500000)</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>30</CreationUpdateNumber>
+        <Inclusive>true</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}122">
+          <Value>100000</Value>
+          <ResolvedValue>100000</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7be5">
+        <Name>&gt;=500000</Name>
+        <Alias>&gt;=500000</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>29</CreationUpdateNumber>
+        <Inclusive>true</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}119">
+          <Value>500000</Value>
+          <ResolvedValue>500000</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <CalendarForm>DateTime</CalendarForm>
+      <Excluded>false</Excluded>
+      <ValidationUpdateNumber>34</ValidationUpdateNumber>
+    </BucketSet>
+    <BucketSet id="G}17d768a9:162460f4b33:-7be2">
+      <Name>CreditRating</Name>
+      <Alias>Credit Rating</Alias>
+      <Visible>true</Visible>
+      <CreationUpdateNumber>35</CreationUpdateNumber>
+      <IDofType>J}java.lang.String</IDofType>
+      <ListContentID>B}nil</ListContentID>
+      <Type>String</Type>
+      <Form>LOV</Form>
+      <Bucket id="G}17d768a9:162460f4b33:-7be1">
+        <Name>otherwise</Name>
+        <Alias>otherwise</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>35</CreationUpdateNumber>
+        <Inclusive>true</Inclusive>
+        <Otherwise>true</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}133">
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7be0">
+        <Name>&quot;GOOD&quot;</Name>
+        <Alias>&quot;GOOD&quot;</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>37</CreationUpdateNumber>
+        <Inclusive>false</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}138">
+          <Value>&quot;GOOD&quot;</Value>
+          <ResolvedValue>&quot;GOOD&quot;</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7bdf">
+        <Name>&quot;POOR&quot;</Name>
+        <Alias>&quot;POOR&quot;</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>38</CreationUpdateNumber>
+        <Inclusive>false</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}141">
+          <Value>&quot;POOR&quot;</Value>
+          <ResolvedValue>&quot;POOR&quot;</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <Bucket id="G}17d768a9:162460f4b33:-7bde">
+        <Name>&quot;EXCELLENT&quot;</Name>
+        <Alias>&quot;EXCELLENT&quot;</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>39</CreationUpdateNumber>
+        <Inclusive>false</Inclusive>
+        <Otherwise>false</Otherwise>
+        <Excluded>false</Excluded>
+        <Expression id="L}144">
+          <Value>&quot;EXCELLENT&quot;</Value>
+          <ResolvedValue>&quot;EXCELLENT&quot;</ResolvedValue>
+          <IsConstant>true</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Bucket>
+      <CalendarForm>Date</CalendarForm>
+      <Excluded>false</Excluded>
+      <ValidationUpdateNumber>42</ValidationUpdateNumber>
+    </BucketSet>
     <SupportsXPathEnabled>false</SupportsXPathEnabled>
     <DecisionFunction id="G}58f54552:1623b85ef8f:-7be9">
       <Name>DecisionService</Name>
@@ -435,21 +577,37 @@
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>8</UpdateNumber>
+    <UpdateNumber>42</UpdateNumber>
     <ValidationUpdateNumber>-1</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}58f54552:1623b85ef8f:-7bea">
     <Name>Ruleset1</Name>
     <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>4</ValidationUpdateNumber>
+    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
+    <RuleSheet id="G}17d768a9:162460f4b33:-7bdc">
+      <Name>CreditRules</Name>
+      <Alias>CreditRules</Alias>
+      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <Priority>medium</Priority>
+      <Active>true</Active>
+      <CalendarForm>DateTime</CalendarForm>
+      <TreeMode>false</TreeMode>
+      <Visible>true</Visible>
+      <ShowPatterns>false</ShowPatterns>
+      <Logical>false</Logical>
+      <AllowGaps>true</AllowGaps>
+      <ConflictPolicy>manual</ConflictPolicy>
+      <OrderRulesByBucket>false</OrderRulesByBucket>
+      <VerticalOrientation>true</VerticalOrientation>
+    </RuleSheet>
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>4</CreationUpdateNumber>
   </RuleSet>
   <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>8</UpdateNumber>
+  <UpdateNumber>44</UpdateNumber>
   <ResourceBundle>CreditRulesTranslations</ResourceBundle>
   <TestModel id="L}3">
     <ValidationUpdateNumber>1</ValidationUpdateNumber>
