@@ -444,6 +444,7 @@
                     <bpmnext:OracleExtensions/>
                 </bpmn:extensionElements>
                 <bpmn:sourceRef>ruleInputDO</bpmn:sourceRef>
+                <bpmn:sourceRef>loanDO</bpmn:sourceRef>
                 <bpmn:targetRef>ruleInputDO</bpmn:targetRef>
                 <bpmn:assignment>
                     <bpmn:extensionElements>
@@ -466,27 +467,48 @@
                         </bpmn:extensionElements>
                     </bpmn:to>
                 </bpmn:assignment>
-            </bpmn:dataInputAssociation>
-            <bpmn:dataOutputAssociation>
-                <bpmn:extensionElements>
-                    <bpmnext:OracleExtensions/>
-                </bpmn:extensionElements>
-                <bpmn:sourceRef>ruleOutputDO</bpmn:sourceRef>
-                <bpmn:targetRef>ruleOutputDO</bpmn:targetRef>
                 <bpmn:assignment>
                     <bpmn:extensionElements>
                         <bpmnext:OracleExtensions>
                             <bpmnext:DataAssignment operation="copy" ignoreMissingData="false"/>
                         </bpmnext:OracleExtensions>
                     </bpmn:extensionElements>
-                    <bpmn:from xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataOutput('ruleOutputDO')
+                    <bpmn:from xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataObject('loanDO')/LoanAmmount
                         <bpmn:extensionElements>
                             <bpmnext:OracleExtensions>
                                 <bpmnext:Expression mode="simple"/>
                             </bpmnext:OracleExtensions>
                         </bpmn:extensionElements>
                     </bpmn:from>
-                    <bpmn:to xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataObject('ruleOutputDO')
+                    <bpmn:to xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:ns="http://xmlns.oracle.com/bpm/bpmobject/BusinessData/RuleInput" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataInput('ruleInputDO')/ns:loanAmount
+                        <bpmn:extensionElements>
+                            <bpmnext:OracleExtensions>
+                                <bpmnext:Expression mode="simple"/>
+                            </bpmnext:OracleExtensions>
+                        </bpmn:extensionElements>
+                    </bpmn:to>
+                </bpmn:assignment>
+            </bpmn:dataInputAssociation>
+            <bpmn:dataOutputAssociation>
+                <bpmn:extensionElements>
+                    <bpmnext:OracleExtensions/>
+                </bpmn:extensionElements>
+                <bpmn:sourceRef>ruleOutputDO</bpmn:sourceRef>
+                <bpmn:targetRef>routing</bpmn:targetRef>
+                <bpmn:assignment>
+                    <bpmn:extensionElements>
+                        <bpmnext:OracleExtensions>
+                            <bpmnext:DataAssignment operation="copy" ignoreMissingData="false"/>
+                        </bpmnext:OracleExtensions>
+                    </bpmn:extensionElements>
+                    <bpmn:from xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:ns="http://xmlns.oracle.com/bpm/bpmobject/BusinessData/RuleOutput" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataOutput('ruleOutputDO')/ns:loanApprovalStatus
+                        <bpmn:extensionElements>
+                            <bpmnext:OracleExtensions>
+                                <bpmnext:Expression mode="simple"/>
+                            </bpmnext:OracleExtensions>
+                        </bpmn:extensionElements>
+                    </bpmn:from>
+                    <bpmn:to xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">bpmn:getDataObject('routing')
                         <bpmn:extensionElements>
                             <bpmnext:OracleExtensions>
                                 <bpmnext:Expression mode="simple"/>
@@ -1017,7 +1039,13 @@
                     </bpmnext:FeatureSet>
                 </bpmnext:OracleExtensions>
             </bpmn:extensionElements>
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">(bpmn:getDataObject('routing') = 'AUTO_APPROVED')
+                <bpmn:extensionElements>
+                    <bpmnext:OracleExtensions>
+                        <bpmnext:Expression mode="simple"/>
+                    </bpmnext:OracleExtensions>
+                </bpmn:extensionElements>
+            </bpmn:conditionExpression>
         </bpmn:sequenceFlow>
         <bpmn:sequenceFlow sourceRef="GTW21978451709275" targetRef="ACT21978170069417" name="sf21978462291944" id="sf21978462291944">
             <bpmn:extensionElements>
@@ -1034,7 +1062,13 @@
                     </bpmnext:FeatureSet>
                 </bpmnext:OracleExtensions>
             </bpmn:extensionElements>
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="http://www.w3.org/1999/XPath" xpathns:bpmn="http://www.omg.org/bpmn20" xmlns:xpathns="http://xmlns.oracle.com/bpm/XPathNamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">(bpmn:getDataObject('routing') = 'AUTO_APPROVED')
+                <bpmn:extensionElements>
+                    <bpmnext:OracleExtensions>
+                        <bpmnext:Expression mode="simple"/>
+                    </bpmnext:OracleExtensions>
+                </bpmn:extensionElements>
+            </bpmn:conditionExpression>
         </bpmn:sequenceFlow>
         <bpmn:dataObject name="reviewOutCom" id="reviewOutCom">
             <bpmn:extensionElements>

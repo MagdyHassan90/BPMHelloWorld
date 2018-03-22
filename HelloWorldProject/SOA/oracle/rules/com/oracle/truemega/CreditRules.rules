@@ -572,32 +572,310 @@
         <List>false</List>
         <Tree>false</Tree>
       </DecisionFunctionOutput>
-      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <ValidationUpdateNumber>62</ValidationUpdateNumber>
       <RuleFiringLimit>10000</RuleFiringLimit>
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>42</UpdateNumber>
-    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+    <UpdateNumber>52</UpdateNumber>
+    <ValidationUpdateNumber>62</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}58f54552:1623b85ef8f:-7bea">
     <Name>Ruleset1</Name>
     <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+    <ValidationUpdateNumber>102</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
     <RuleSheet id="G}17d768a9:162460f4b33:-7bdc">
       <Name>CreditRules</Name>
       <Alias>CreditRules</Alias>
-      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <ValidationUpdateNumber>102</ValidationUpdateNumber>
       <Priority>medium</Priority>
       <Active>true</Active>
       <CalendarForm>DateTime</CalendarForm>
       <TreeMode>false</TreeMode>
       <Visible>true</Visible>
+      <SimpleTest id="L}188">
+        <FactType>RuleInputType</FactType>
+        <IDofFactType>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleinput.RuleInputType</IDofFactType>
+        <FactPath>RuleInputType</FactPath>
+        <FactPathIDs>L}188</FactPathIDs>
+        <Form>FormIsA</Form>
+        <IDofOperator>B}==</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>false</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
       <ShowPatterns>false</ShowPatterns>
       <Logical>false</Logical>
+      <Dimension id="L}184">
+        <IDofSharedBucketSet>G}17d768a9:162460f4b33:-7beb</IDofSharedBucketSet>
+        <DimensionNode id="L}186">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bea</BucketIDTable>
+          <Values>&lt;10000</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}201</ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}251">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7be6</BucketIDTable>
+          <Values>[10000..100000)</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}252</ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}267">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bea</BucketIDTable>
+          <Values>&lt;10000</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}268</ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}284">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7be6</BucketIDTable>
+          <Values>[10000..100000)</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}285</ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}302">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bea G}17d768a9:162460f4b33:-7be4</BucketIDTable>
+          <Values>&lt;10000 [100000..500000)</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}303</ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}323">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7be5</BucketIDTable>
+          <Values>&gt;=500000</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes>L}324</ChildDimensionNodes>
+        </DimensionNode>
+        <PrivateBucketSet id="G}-49d31f3e:1624ae11728:-7be6">
+          <Visible>true</Visible>
+          <CreationUpdateNumber>51</CreationUpdateNumber>
+          <IDofType>J}double</IDofType>
+          <ListContentID>B}nil</ListContentID>
+          <Type>double</Type>
+          <Form>Default</Form>
+          <Bucket id="G}-49d31f3e:1624ae11728:-7be5">
+            <Name>otherwise</Name>
+            <Alias>otherwise</Alias>
+            <Visible>true</Visible>
+            <CreationUpdateNumber>51</CreationUpdateNumber>
+            <Inclusive>true</Inclusive>
+            <Otherwise>true</Otherwise>
+            <Excluded>false</Excluded>
+            <Expression id="L}189">
+              <IsConstant>true</IsConstant>
+              <ParameterID>B}nil</ParameterID>
+            </Expression>
+          </Bucket>
+          <CalendarForm>Date</CalendarForm>
+          <Excluded>false</Excluded>
+          <ValidationUpdateNumber>52</ValidationUpdateNumber>
+        </PrivateBucketSet>
+        <SharedBucketSet>Loan Amount</SharedBucketSet>
+        <Expression id="L}185">
+          <Value>RuleInputType.loanAmount</Value>
+          <ResolvedValue>`L}188`.`J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleinput.RuleInputType.{loanAmount}`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Dimension>
+      <Dimension id="L}199">
+        <IDofSharedBucketSet>G}17d768a9:162460f4b33:-7be2</IDofSharedBucketSet>
+        <DimensionNode id="L}201">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bdf</BucketIDTable>
+          <Values>&quot;POOR&quot;</Values>
+          <ParentDimensionNode>L}186</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}252">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bdf</BucketIDTable>
+          <Values>&quot;POOR&quot;</Values>
+          <ParentDimensionNode>L}251</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}268">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7be0</BucketIDTable>
+          <Values>&quot;GOOD&quot;</Values>
+          <ParentDimensionNode>L}267</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}285">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7be0</BucketIDTable>
+          <Values>&quot;GOOD&quot;</Values>
+          <ParentDimensionNode>L}284</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}303">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bde</BucketIDTable>
+          <Values>&quot;EXCELLENT&quot;</Values>
+          <ParentDimensionNode>L}302</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}324">
+          <BucketIDTable>G}17d768a9:162460f4b33:-7bde</BucketIDTable>
+          <Values>&quot;EXCELLENT&quot;</Values>
+          <ParentDimensionNode>L}323</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <PrivateBucketSet id="G}-49d31f3e:1624ae11728:-7be3">
+          <Visible>true</Visible>
+          <CreationUpdateNumber>54</CreationUpdateNumber>
+          <IDofType>J}java.lang.String</IDofType>
+          <ListContentID>B}nil</ListContentID>
+          <Type>String</Type>
+          <Form>Default</Form>
+          <Bucket id="G}-49d31f3e:1624ae11728:-7be2">
+            <Name>otherwise</Name>
+            <Alias>otherwise</Alias>
+            <Visible>true</Visible>
+            <CreationUpdateNumber>54</CreationUpdateNumber>
+            <Inclusive>true</Inclusive>
+            <Otherwise>true</Otherwise>
+            <Excluded>false</Excluded>
+            <Expression id="L}202">
+              <IsConstant>true</IsConstant>
+              <ParameterID>B}nil</ParameterID>
+            </Expression>
+          </Bucket>
+          <CalendarForm>Date</CalendarForm>
+          <Excluded>false</Excluded>
+          <ValidationUpdateNumber>55</ValidationUpdateNumber>
+        </PrivateBucketSet>
+        <SharedBucketSet>Credit Rating</SharedBucketSet>
+        <Expression id="L}200">
+          <Value>RuleInputType.creditRating</Value>
+          <ResolvedValue>`L}188`.`J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleinput.RuleInputType.{creditRating}`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Dimension>
+      <DTAction id="L}219">
+        <Form>Assert New</Form>
+        <Target>RuleOutputType</Target>
+        <ResolvedTarget>`J}public com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType()`</ResolvedTarget>
+        <Expression id="L}223">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>loanApprovalStatus</ParameterAlias>
+          <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+          <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+        </Expression>
+        <DSLId>B}nil</DSLId>
+        <AlwaysSelected>true</AlwaysSelected>
+        <DTActionNode id="L}220">
+          <Selected>false</Selected>
+          <Expression id="L}228">
+            <Value>&quot;MANUAL_APPROVAL&quot;</Value>
+            <ResolvedValue>&quot;MANUAL_APPROVAL&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}254">
+          <Selected>false</Selected>
+          <Expression id="L}257">
+            <Value>&quot;AUTO_REJECTED&quot;</Value>
+            <ResolvedValue>&quot;AUTO_REJECTED&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}270">
+          <Selected>false</Selected>
+          <Expression id="L}273">
+            <Value>&quot;AUTO_APPROVED&quot;</Value>
+            <ResolvedValue>&quot;AUTO_APPROVED&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}287">
+          <Selected>false</Selected>
+          <Expression id="L}290">
+            <Value>&quot;MANUAL_APPROVAL&quot;</Value>
+            <ResolvedValue>&quot;MANUAL_APPROVAL&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}305">
+          <Selected>false</Selected>
+          <Expression id="L}308">
+            <Value>&quot;AUTO_APPROVED&quot;</Value>
+            <ResolvedValue>&quot;AUTO_APPROVED&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}326">
+          <Selected>false</Selected>
+          <Expression id="L}329">
+            <Value>&quot;MANUAL_APPROVAL&quot;</Value>
+            <ResolvedValue>&quot;MANUAL_APPROVAL&quot;</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>loanApprovalStatus</ParameterAlias>
+            <ParameterID>J}com.oracle.xmlns.bpm.bpmobject.businessdata.ruleoutput.RuleOutputType.{loanApprovalStatus}</ParameterID>
+            <DTActionParameterName>loanApprovalStatus</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+      </DTAction>
+      <DTRule id="L}187">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>51</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}253">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>71</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}269">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>75</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}286">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>79</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}304">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>83</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}325">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>88</CreationUpdateNumber>
+      </DTRule>
       <AllowGaps>true</AllowGaps>
       <ConflictPolicy>manual</ConflictPolicy>
       <OrderRulesByBucket>false</OrderRulesByBucket>
@@ -606,8 +884,8 @@
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>4</CreationUpdateNumber>
   </RuleSet>
-  <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>44</UpdateNumber>
+  <ValidationUpdateNumber>102</ValidationUpdateNumber>
+  <UpdateNumber>102</UpdateNumber>
   <ResourceBundle>CreditRulesTranslations</ResourceBundle>
   <TestModel id="L}3">
     <ValidationUpdateNumber>1</ValidationUpdateNumber>
